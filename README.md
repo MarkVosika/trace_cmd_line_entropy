@@ -17,4 +17,6 @@ Due to limitations of the amount of data that can be pulled back from all endpoi
 
 The script uses fernet encryption to protect the credentials, separating the key from the ciphertext. There is also a python script included for taking your base64 encoded password and generating a fernet key with ciphertext file.
 
-Many thanks to the python community for all the online tutorials, whose code has been borrowed/modified to make this possible.
+Shoutout to Nathaniel (J.P.) Nieuwendam who helped me figure out the required syntax for asking a question with multiple user inputs, via the api. 
+
+Many thanks goes out to the Tanium TAMs and the python community for all the online tutorials, whose code has been borrowed/modified to make this possible.
