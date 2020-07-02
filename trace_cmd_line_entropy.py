@@ -20,6 +20,7 @@ from requests.auth import HTTPBasicAuth
 requests.packages.urllib3.disable_warnings()
 
 #___________________________________________________________________________________________________________________________________
+
 #empty variables for handling encryption
 key = ""
 uncipher_text = ""
