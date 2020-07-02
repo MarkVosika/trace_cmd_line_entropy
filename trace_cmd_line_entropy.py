@@ -18,6 +18,7 @@ import urllib
 import urllib3
 from requests.auth import HTTPBasicAuth
 requests.packages.urllib3.disable_warnings()
+
 #___________________________________________________________________________________________________________________________________
 #empty variables for handling encryption
 key = ""
@@ -263,6 +264,8 @@ if len(data) > 0:
 
 		server.sendmail(email_sender,email_recipient,text)
 		server.quit()
+		
+#___________________________________________________________________________________________________________________________________
 
 #close file handles and remove files
 	attachment.close()
