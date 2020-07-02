@@ -116,7 +116,6 @@ for cmd in json_load["data"]["result_sets"][0]["rows"]:
 	if entropy > value:
 		threshold_match.append(cmd_line)
 
-
 #_____________________________________________________________________________________________________________________________________________
 
 # for absolute time range 
@@ -153,7 +152,6 @@ elif len(threshold_match) > 0:
 		sensor_obj["parameters"] = [{"key":"||TimeRange||","value":"absolute time range"},{"key":"||AbsoluteTimeRange||","value":time_range},{"key":"||TreatInputAsRegEx||","value":"0"},{"key":"||OutputYesOrNoFlag||","value":"0"},{"key":"||MaxResultsPerHost||","value":"10"},{"key":"||MakeStackable||","value":"0"},{"key":"||ProcessPath||","value":""},{"key":"||ParentProcessPath||","value":""},{"key":"||CommandLine||","value":match},{"key":"||MD5||","value":""},{"key":"||Domain||","value":""},{"key":"||Username||","value":""}]
 		body = {}
 		body["selects"] = [{"sensor":sensor_obj}]
-
 	
 #_____________________________________________________________________________________________________________________________________________
 
@@ -161,7 +159,6 @@ elif len(threshold_match) > 0:
 		api_path = '%s/api/v2/questions' % base_url
 		connectionsReq = requests.post(api_path, verify=False, headers={'session': sessionid}, json=body)
 		json_data = (json.dumps(connectionsReq.json()))
-
 
 #_____________________________________________________________________________________________________________________________________________
 
@@ -220,7 +217,6 @@ if len(data) > 0:
 	for lst in data:
 		sheet1.append(lst)
 	wb.save(excel_file) 	#save workbook
-
 
 #_____________________________________________________________________________________________________________________________________________
 
