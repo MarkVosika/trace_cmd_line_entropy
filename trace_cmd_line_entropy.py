@@ -47,7 +47,6 @@ file_object2.close()
 
 #___________________________________________________________________________________________________________________________________
 
-
 #get details about a saved question by name and load the JSON results into python
 saved_question = requests.get(base_url + '/api/v2/saved_questions/by-name/Trace_Executed_Processes_1hour',verify=False, headers={'session': sessionid})
 #saved_question = requests.get(base_url + '/api/v2/result_data/saved_question/1841',verify=False, headers={'session': sessionid})
@@ -71,14 +70,12 @@ time.sleep(60)
 
 #___________________________________________________________________________________________________________________________________
 
-
 #ask the question reference the id number and load the JSON results into python
 saved_question = requests.get(base_url + '/api/v2/result_data/saved_question/' + id_num ,verify=False, headers={'session': sessionid})
 json_input = (json.dumps(saved_question.json(), indent=4, sort_keys=True, ensure_ascii=False))
 json_load = json.loads(json_input)
 
 #___________________________________________________________________________________________________________________________________
-
 
 #parse through the results getting pulling back a list of column headers
 
@@ -91,7 +88,7 @@ for lst in json_load["data"]["result_sets"][0]["columns"]:
 
 #___________________________________________________________________________________________________________________________________
 
-# fuction calculates shannon entropy for a list of strings			
+# function calculates shannon entropy for a list of strings			
 def shannon(word):
 	entropy = 0.0
 	length = len(word)
@@ -129,7 +126,6 @@ time_2h_ago = int(round((time.time() - 2 * 60 * 60)* 1000))
 time_range = str(time_2h_ago)+'|'+str(time_now)
 
 #_____________________________________________________________________________________________________________________________________________
-
 
 # get source hash
 r = requests.get(base_url + "/api/v2/sensors/by-name/" + urllib.parse.quote("Trace Executed Processes"), headers={'session':sessionid}, verify=False)
@@ -206,7 +202,6 @@ elif len(threshold_match) > 0:
 						for lst in v:
 							temp.append(lst[0]['text'])
 			data.append(temp)
-
 
 #_____________________________________________________________________________________________________________________________________________
 
