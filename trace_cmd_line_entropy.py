@@ -111,7 +111,6 @@ for cmd in json_load["data"]["result_sets"][0]["rows"]:
 	cmd_line = cmd['data'][6][0]['text']
 	entropy = shannon(cmd_line)
 	print (entropy)
-#	print (entropy)
 	value = 5.75
 	if entropy > value:
 		threshold_match.append(cmd_line)
