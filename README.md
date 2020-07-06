@@ -1,7 +1,7 @@
 # trace_cmd_line_entropy
 A python script to extract the cmd line string from the Tanium recorder, generate an entropy value, and compare that value to a threshold.
 
-In the cyber security cat and mouse game of attackers vs defenders, attackers have been using living off the land binaries for years to accomplish their goals. In response to this, defenders have become better at detecting these attacks, looking for specific strings used by the attackers.  In response to this, cmd line obfuscation frameworks (i.e. dosfuscation) and techniques were born to combat looking for known strings.  One method to detect when obfuscation is used on the cmd line is to utilize entropy to look for strings with a high degree of randomness.  
+In the cyber security cat and mouse game of attackers vs defenders, attackers have been using living off the land binaries for years to accomplish their goals. In response to this, defenders have become better at detecting these attacks, looking for specific strings used by attackers.  In response to this, cmd line obfuscation frameworks (i.e. dosfuscation) and techniques were born to combat looking for known strings.  One method to detect when obfuscation is used on the cmd line is to utilize entropy to look for strings with a high degree of randomness.  
 
 Checking for entropy is best done in a SEIM, using something like URL Toolbox in Splunk for example. For those who have Tanium, but may not have a SEIM, or do not have the budget to send their endpoint logs to a SEIM, this a method to check for high cmd line entropy using the Threat Response module and the Tanium REST API. 
 
