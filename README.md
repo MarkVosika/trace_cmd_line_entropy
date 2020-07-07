@@ -9,7 +9,7 @@ The Python script starts off by asking a Tanium saved question (Trace Executed P
 
 Get Trace Executed Processes[1 hour,1579804625753|1579804625753,1,0,100,1,"(?i).*(\\cmd\.exe$|\\powershell\.exe$|\\java\.exe$|\\wmic\.exe$|\\cscript\.exe$|\\wscript\.exe$|\/bash$)","","","","",""] from all machines with OS Platform equals windows
 
-Then the cmd line string of each result is extracted and run through the shannon entropy algorithm (code borrowed from URL Toolbox) to computate an entropy value for that string.  Each entropy value is then compared to a threshold value, to determine higher than normal entropy.  I have found 5.75 to be good threshold value to catch anything base64 encoded and above and eliminate most false positives, but your mileage may vary.
+Then the cmd line string of each result is extracted and run through the shannon entropy algorithm (code borrowed from URL Toolbox) to computate an entropy value for that string.  Each entropy value is then compared to a threshold value, to determine higher than normal entropy.  I have found 5.75 to be a good threshold value to catch anything base64 encoded and above and eliminate most false positives, but your mileage may vary.
 
 Next the script will take any results that are higher than the threshold value and ask additional questions (no make stackable option) searching specifically for the cmd line value, to gather details about the host its sourced from.  Prevention is built in to ensure the results are limited (script terminates) should there be a new false positive deployed in the environment.  The results of each question are written to a spreadsheet and the spreadsheet is emailed off. 
 
