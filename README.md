@@ -20,3 +20,5 @@ The script uses fernet encryption to protect the credentials, separating the key
 Shoutout to Nathaniel (J.P.) Nieuwendam who helped me figure out the required syntax for asking a question with multiple user inputs, via the api. 
 
 Many thanks goes out to the Tanium TAMs and the python community for all the online tutorials, whose code has been borrowed/modified to make this possible.
+
+![alt text](entropy_example.jpg "example entropy")
