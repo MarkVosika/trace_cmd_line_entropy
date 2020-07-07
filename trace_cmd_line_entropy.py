@@ -49,7 +49,6 @@ file_object2.close()
 
 #get details about a saved question by name and load the JSON results into python
 saved_question = requests.get(base_url + '/api/v2/saved_questions/by-name/Trace_Executed_Processes_1hour',verify=False, headers={'session': sessionid})
-#saved_question = requests.get(base_url + '/api/v2/result_data/saved_question/1841',verify=False, headers={'session': sessionid})
 json_input = (json.dumps(saved_question.json(), indent=4, sort_keys=True, ensure_ascii=False))
 json_load = json.loads(json_input)
 
